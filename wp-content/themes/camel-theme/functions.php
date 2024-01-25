@@ -3,11 +3,15 @@
 require get_template_directory() . '/inc/customizer.php';
 
 function camel_load_scripts(){
+    wp_enqueue_style( 'swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '' );
+    wp_enqueue_script( 'swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '', true );
+
     wp_enqueue_style( 'camel-style', get_stylesheet_uri(), array(), filemtime( get_template_directory() . '/style.css' ), 'all' );
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap', array(), null );
-    wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array(), '1.0', true );
+    wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'camel_load_scripts' );
+
 
 function camel_config(){
 
