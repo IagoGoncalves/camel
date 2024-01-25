@@ -334,5 +334,10 @@ img {
   .banner {
     position: absolute;
     top: 0px;
+    .swiper-container {
+      .swiper-wrapper {
+        overflow: hidden;
+      }
+    }
   }
 }
