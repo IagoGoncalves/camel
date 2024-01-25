@@ -4,45 +4,20 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <?php if ( ! get_option( 'site_icon' ) ) : ?>
+		<link href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" rel="shortcut icon" />
+	<?php endif; ?>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-    <div id="page">
-        <header>
-            <section class="top-bar">
-                <div class="container">
-                    <div class="logo">
-                        <?php 
-                        if( has_custom_logo() ){
-                            the_custom_logo();
-                        }else{
-                            ?>
-                                <a href="<?php echo esc_url(home_url( '/' )); ?>"><span><?php bloginfo( 'name' ); ?></span></a>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                    <div class="searchbox">
-                        <?php get_search_form(); ?>
-                    </div>                    
-                </div>
-            </section>
-            <?php 
-            if( ! is_page( 'landing-page' )): ?>
-            <section class="menu-area">
-                <div class="container">
-                    <nav class="main-menu">
-                        <button class="check-button">
-                            <div class="menu-icon">
-                                <div class="bar1"></div>
-                                <div class="bar2"></div>
-                                <div class="bar3"></div>
-                            </div>
-                        </button>
-                        <?php wp_nav_menu( array( 'theme_location' => 'wp_devs_main_menu', 'depth' => 2 )); ?>
-                    </nav>                    
-                </div>
-            </section>
-            <?php endif; ?>
+    <div class="container-header">
+        <header class="align-between">
+            <div class="photo">
+				<img alt="Camel" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
+            </div>
+            <?php wp_nav_menu( array( 'theme_location' => 'wp_devs_main_menu', 'depth' => 2 )); ?>
+            <a href="#" class="btn-primary">Orçamento</a>
         </header>
+    </div>
