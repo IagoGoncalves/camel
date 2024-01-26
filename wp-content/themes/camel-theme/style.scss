@@ -283,6 +283,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+.disabled {
+  display: none;
+}
 .btn-primary {
   font-size: 2rem;
   background-color: var(--camel-secondary2);
@@ -332,11 +335,37 @@ img {
 /*************** HOME PAGE *****************/
 .home {
   .banner {
+    width: 100%;
     position: absolute;
     top: 0px;
     .swiper-container {
       .swiper-wrapper {
-        overflow: hidden;
+        overflow: hidden !important;
+        .swiper-slide {
+          .description {
+            position: absolute;
+            top: 35%;
+            left: 10%;
+            width: 35%;
+            h2 {
+              font-size: 5rem;
+              font-style: normal;
+              font-weight: 700;
+              color: var(--camel-light2);
+              margin-bottom: 130px;
+            }
+            .contact-us {
+              font-size: 2rem;
+              font-weight: 500;
+              color: var(--camel-light2);
+              margin-left: 50px;
+              transition: all 0.2s;
+              &:hover {
+                color: var(--camel-secondary2);
+              }
+            }
+          }
+        }
       }
     }
   }
