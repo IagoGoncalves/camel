@@ -22,7 +22,7 @@ get_header(); ?>
 											<div class="description">
 												<h2><?php the_title()?></h2>
 												<?php if (get_field('txt-first-btn') !== "") { ?>
-													<a href="<?= esc_url(get_field('first-btn')); ?>" class="btn-primary"><?= esc_html(get_field('txt-first-btn')); ?></a>
+													<a href="<?= esc_url(get_field('first-btn')); ?>" class="btn-primary"><span><?= esc_html(get_field('txt-first-btn')); ?></span></a>
 												<?php } ?>
 
 												<?php if (get_field('txt-secondary-btn') !== "") { ?>

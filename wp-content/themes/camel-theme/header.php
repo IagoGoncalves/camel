@@ -18,6 +18,6 @@
 				<img alt="Camel" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
             </div>
             <?php wp_nav_menu( array( 'theme_location' => 'wp_devs_main_menu', 'depth' => 2 )); ?>
-            <a href="#" class="btn-primary">Orçamento</a>
+            <a href="#" class="btn-primary"><span>Orçamento</span></a>
         </header>
     </div>
