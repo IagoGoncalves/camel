@@ -311,6 +311,7 @@ img {
     position: absolute;
     top: 0;
     left: -200px;
+    opacity: 0;
   }
   &:hover {
     transition: 0.3s;
@@ -319,6 +320,7 @@ img {
       color: var(--camel-light2);
     }
     &:before {
+      opacity: 1;
       transition: all 0.2s;
       left: 0px;
     }

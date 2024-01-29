@@ -43,10 +43,8 @@ get_header(); ?>
 				</div>
 			</div>			
 		</section>
-        <?php
-            for ($i=0; $i < 50; $i++) { 
-                echo '<h1 style="margin-top: 50px">iago lindo</h1>';
-            }
-        ?>
+        <section class="our-services">
+			
+		</section>
    	</main>
 <?php get_footer(); ?>

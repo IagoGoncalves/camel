@@ -2,7 +2,7 @@
 // Banner da pagina home
 document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.banner-home', {
-        speed: 1000,
+        speed: 5000,
         loop: true,
         spaceBetween: 30,
         effect: 'fade',
@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
               return '<span class="' + className + '">' + (index + 1) + "</span>";
             },
           },
-        // autoplay: {
-        //     delay: 1000,
-        // },    
+        autoplay: {
+            delay: 2500,
+        },    
     });
 });

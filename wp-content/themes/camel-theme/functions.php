@@ -15,13 +15,13 @@ add_action( 'wp_enqueue_scripts', 'camel_load_scripts' );
 
 function camel_config(){
 
-    $textdomain = 'wp-devs';
+    $textdomain = 'camel';
     load_theme_textdomain( $textdomain, get_template_directory() . '/languages/' );
 
     register_nav_menus(
         array(
-            'wp_devs_main_menu' => esc_html__( 'Main Menu', 'wp-devs' ),
-            'wp_devs_footer_menu' => esc_html__( 'Footer Menu', 'wp-devs' )
+            'wp_devs_main_menu' => esc_html__( 'Main Menu', 'camel' ),
+            'wp_devs_footer_menu' => esc_html__( 'Footer Menu', 'camel' )
         )
     );
 
