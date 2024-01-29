@@ -44,7 +44,30 @@ get_header(); ?>
 			</div>			
 		</section>
         <section class="our-services">
-			
+			<div class="container">
+				<h2 class="h2-bold-title">Nossos serviços</h2>
+				<article class="align-between">
+					<?php
+						$args = array(
+							'post_type' => 'services',
+							'posts_per_page' => 4
+						);
+						$var = new WP_Query($args);
+							if($var->have_posts()):
+								while($var->have_posts()):
+									$var->the_post();?>																	
+										<div>
+											<img src="<?= get_field('icone_servico'); ?>" alt="">
+											<h3 class="h1-bold"><?php the_title()?></h3>
+											<p class="h3-light"><?= get_field('sobre_o_servico'); ?></p>
+										</div>
+									<?php
+								endwhile;
+							endif;
+						wp_reset_postdata(); 
+					?>
+				</article>
+			</div>
 		</section>
    	</main>
 <?php get_footer(); ?>
