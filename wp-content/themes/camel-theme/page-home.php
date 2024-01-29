@@ -69,5 +69,18 @@ get_header(); ?>
 				</article>
 			</div>
 		</section>
+		<section class="about">
+			<div class="container align-between">
+				<div>
+					<h2 class="h2-bold-subtitle"><?= get_field('sobre_a_camel'); ?></h2>
+					<p class="h2-light"><?= get_field('texto_sobre_a_camel'); ?></p>
+					<span>
+						<a href="<?= get_field('saiba_mais'); ?>" class="btn-primary"><span><?= get_field('nome_botao_1'); ?></span></a>
+						<a href="<?= get_field('fale_conosco'); ?>"><?= get_field('nome_botao_2'); ?></a>
+					</span>
+				</div>
+				<img src="<?= get_field('imagem_sobre_camel'); ?>" alt="">
+			</div>
+		</section>
    	</main>
 <?php get_footer(); ?>
