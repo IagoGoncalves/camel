@@ -488,6 +488,7 @@ img {
       }
       > article {
         div {
+          position: relative;
           background-color: var(--camel-primary2);
           height: 450px;
           width: 330px;
@@ -498,13 +499,42 @@ img {
           padding: 50px 40px;
           border-radius: 20px;
           gap: 30px;
+          transition: all 0.4s;
           h3,
           p {
             color: var(--camel-light2);
+            transition: 0.3s;
+          }
+          img {
+            transition: 0.3s;
           }
           &:nth-child(2),
           &:nth-child(3) {
             margin-top: 140px;
+          }
+          &:after {
+            content: url("images/services-card-arrow.png");
+            position: absolute;
+            bottom: -30px;
+            right: 100px;
+            opacity: 0;
+            transition: 0.3s;
+          }
+          &:hover {
+            background-color: var(--camel-secondary2);
+            box-shadow: 0px 50px 38px -30px rgba(0, 0, 0, 0.25);
+            transform: translateY(-5px);
+            h3,
+            p {
+              color: var(--camel-primary2);
+            }
+            img {
+              filter: invert(1);
+            }
+            &:after {
+              right: 20px;
+              opacity: 1;
+            }
           }
         }
       }
