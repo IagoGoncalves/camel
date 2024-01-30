@@ -1,4 +1,4 @@
-<?php 
+	<?php 
 /**
  * Template Name: Home
  *
@@ -21,13 +21,15 @@ get_header(); ?>
 											<?= get_the_post_thumbnail(get_the_ID());?>
 											<div class="description">
 												<h2><?php the_title()?></h2>
-												<?php if (get_field('txt-first-btn') !== "") { ?>
-													<a href="<?= esc_url(get_field('first-btn')); ?>" class="btn-primary"><span><?= esc_html(get_field('txt-first-btn')); ?></span></a>
-												<?php } ?>
+												<span>
+													<?php if (get_field('txt-first-btn') !== "") { ?>
+														<a href="<?= esc_url(get_field('first-btn')); ?>" class="btn-primary"><span><?= esc_html(get_field('txt-first-btn')); ?></span></a>
+													<?php } ?>
 
-												<?php if (get_field('txt-secondary-btn') !== "") { ?>
-													<a href="<?= esc_url(get_field('url-secondary-btn')); ?>" class="contact-us"><?= esc_html(get_field('txt-secondary-btn')); ?></a>
-												<?php } ?>
+													<?php if (get_field('txt-secondary-btn') !== "") { ?>
+														<a href="<?= esc_url(get_field('url-secondary-btn')); ?>" class="contact-us"><?= esc_html(get_field('txt-secondary-btn')); ?></a>
+													<?php } ?>
+												</span>
 											</div>
 										</div>	
 									<?php
@@ -74,12 +76,37 @@ get_header(); ?>
 				<div>
 					<h2 class="h2-bold-subtitle"><?= get_field('sobre_a_camel'); ?></h2>
 					<p class="h2-light"><?= get_field('texto_sobre_a_camel'); ?></p>
-					<span>
+					<span class="talk-us">
 						<a href="<?= get_field('saiba_mais'); ?>" class="btn-primary"><span><?= get_field('nome_botao_1'); ?></span></a>
-						<a href="<?= get_field('fale_conosco'); ?>"><?= get_field('nome_botao_2'); ?></a>
+						<a href="<?= get_field('fale_conosco'); ?>" class="second-a"><?= get_field('nome_botao_2'); ?></a>
 					</span>
 				</div>
 				<img src="<?= get_field('imagem_sobre_camel'); ?>" alt="">
+			</div>
+		</section>
+		<section class="fork-lift">
+			<div class="container align-between">
+				<img src="<?= get_field('imagem_empilhadeira'); ?>" alt="">
+				<div>
+					<h2 class="h2-bold-subtitle"><?= get_field('titulo_secao_empilhadeira'); ?></h2>
+					<p class="h2-light"><?= get_field('texto_secao_empilhadeira'); ?></p>
+					<div class="certifications">
+						<p>Certificados:</p>
+						<img src="<?= get_field('certificado_1'); ?>" alt="">
+						<img src="<?= get_field('certificado_2'); ?>" alt="">
+					</div>
+					<hr>
+					<span class="talk-us">
+						<a href="<?= get_field('saiba_mais'); ?>" class="btn-primary"><span><?= get_field('empilhadeira_nome_botao_1'); ?></span></a>
+						<a href="<?= get_field('fale_conosco'); ?>" class="second-a"><?= get_field('empilhadeira_nome_botao_2'); ?></a>
+					</span>
+				</div>
+			</div>
+		</section>
+		<section class="interest">
+			<div class="container">
+				<h2 class="h2-bold-subtitle"><?= get_field('titulo_da_secao_seja_um_colaborador'); ?></h2>
+				<a href="<?= get_field('url_botao_tenho_interesse'); ?>" class="btn-primary"><span><?= get_field('texto_botao_tenho_interesse'); ?></span></a>
 			</div>
 		</section>
    	</main>

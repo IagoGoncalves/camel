@@ -299,6 +299,8 @@ img {
   display: none;
 }
 .btn-primary {
+  display: block;
+  width: fit-content;
   position: relative;
   font-size: 2rem;
   background-color: var(--camel-secondary2);
@@ -335,6 +337,19 @@ img {
       opacity: 1;
       transition: all 0.2s;
       left: 0px;
+    }
+  }
+}
+.talk-us {
+  display: flex;
+  align-items: center;
+  .second-a {
+    margin-left: 70px;
+    color: var(--camel-light2);
+    font-size: 2rem;
+    transition: all 0.2s;
+    &:hover {
+      color: var(--camel-secondary2);
     }
   }
 }
@@ -397,14 +412,18 @@ img {
               color: var(--camel-light2);
               margin-bottom: 130px;
             }
-            .contact-us {
-              font-size: 2rem;
-              font-weight: 500;
-              color: var(--camel-light2);
-              margin-left: 50px;
-              transition: all 0.2s;
-              &:hover {
-                color: var(--camel-secondary2);
+            > span {
+              display: flex;
+              align-items: center;
+              .contact-us {
+                font-size: 2rem;
+                font-weight: 500;
+                color: var(--camel-light2);
+                margin-left: 50px;
+                transition: all 0.2s;
+                &:hover {
+                  color: var(--camel-secondary2);
+                }
               }
             }
           }
@@ -550,7 +569,7 @@ img {
     background-image: url("images/bg-rounded.png");
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 150px 0;
+    padding: 165px 0;
     .container {
       > div {
         width: 36%;
@@ -562,6 +581,48 @@ img {
           margin: 35px 0 75px;
         }
       }
+      img {
+        border-radius: 35px;
+      }
     }
+  }
+  .fork-lift {
+    margin: 100px 0;
+    .container {
+      > div {
+        width: 40%;
+        > p {
+          margin: 35px 0;
+        }
+        .certifications {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 35px;
+          > p {
+            font-size: 20px;
+            color: #c2c2c2;
+          }
+        }
+        hr {
+          margin: 30px 0;
+          opacity: 0.3;
+        }
+        .talk-us {
+          .second-a {
+            color: var(--camel-primary2);
+            &:hover {
+              color: var(--camel-secondary2);
+            }
+          }
+        }
+      }
+    }
+  }
+  .interest {
+    background-image: url("images/bg-quite-rounded.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 150px 0;
   }
 }
