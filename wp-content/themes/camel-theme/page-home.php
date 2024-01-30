@@ -109,5 +109,19 @@ get_header(); ?>
 				<a href="<?= get_field('url_botao_tenho_interesse'); ?>" class="btn-primary"><span><?= get_field('texto_botao_tenho_interesse'); ?></span></a>
 			</div>
 		</section>
+		<section class="xp">
+			<div class="container align-between">
+				<img src="<?= get_field('imagem_experiencia_camel'); ?>" alt="">
+				<div>
+					<h2 class="h2-bold-subtitle"><?= get_field('titulo_experiencia_camel'); ?></h2>
+					<p class="h2-light"><?= get_field('texto_experiencia_camel'); ?></p>
+					<div class="companies">
+						<img src="<?= get_field('logo1'); ?>" alt="">
+						<img src="<?= get_field('logo2'); ?>" alt="">
+						<img src="<?= get_field('logo3'); ?>" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
    	</main>
 <?php get_footer(); ?>

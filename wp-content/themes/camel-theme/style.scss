@@ -623,6 +623,29 @@ img {
     background-image: url("images/bg-quite-rounded.png");
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 150px 0;
+    padding: 200px 0 300px 0;
+    .container {
+      width: 50%;
+      margin-left: unset;
+      h2 {
+        color: var(--camel-light2);
+        margin-bottom: 70px;
+      }
+    }
+  }
+  .xp {
+    padding: 100px 0;
+    .container {
+      > div {
+        width: 40%;
+        p {
+          margin: 25px 0 40px;
+        }
+        .companies {
+          display: flex;
+          gap: 100px;
+        }
+      }
+    }
   }
 }
