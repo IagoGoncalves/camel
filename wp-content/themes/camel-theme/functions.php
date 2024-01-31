@@ -20,8 +20,8 @@ function camel_config(){
 
     register_nav_menus(
         array(
-            'wp_devs_main_menu' => esc_html__( 'Main Menu', 'camel' ),
-            'wp_devs_footer_menu' => esc_html__( 'Footer Menu', 'camel' )
+            'camel_main_menu' => esc_html__( 'Main Menu', 'camel' ),
+            'camel_footer_menu' => esc_html__( 'Footer Menu', 'camel' ),
         )
     );
 

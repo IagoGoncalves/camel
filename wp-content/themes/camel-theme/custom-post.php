@@ -1,4 +1,19 @@
 <?php 
+    $dados = array(
+        'name'          => _x('Dados', 'post type general name'),
+        'singular_name' => _x('Dado', 'post type singular name'),
+        'menu_name'     => 'Dados',
+    );
+    $args = array(
+        'labels'            => $dados,
+        'description'       => 'Custom Post for dados',
+        'public'            => true,
+        'show_in_nav_menus' => true,
+        'supports' => array('title','revisions'),
+        'menu_icon' => 'dashicons-buddicons-buddypress-logo',
+    );
+    register_post_type('dados', $args);
+
     $banner = array(
         'name'          => _x('Banners', 'post type general name'),
         'singular_name' => _x('Banner', 'post type singular name'),

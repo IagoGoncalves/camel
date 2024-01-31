@@ -390,6 +390,59 @@ img {
   }
 }
 /**************** Footer *******************/
+.site-footer {
+  background-color: var(--camel-primary1);
+  > .container {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    align-items: flex-start;
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--camel-light2);
+      margin-bottom: 30px;
+    }
+    a {
+      font-size: 18px;
+      color: var(--camel-light2);
+      transition: all 0.2s;
+      &:hover {
+        color: var(--camel-secondary2);
+      }
+    }
+    .fast-access {
+      width: 20%;
+      .menu-footer-menu-container {
+        .menu {
+          padding: 0;
+          list-style: none;
+          display: grid;
+          gap: 10px;
+        }
+      }
+    }
+    .services {
+      width: 20%;
+      nav {
+        display: grid;
+        gap: 10px;
+      }
+    }
+    .contact {
+      width: 20%;
+      display: grid;
+      gap: 10px;
+    }
+  }
+  .copyright {
+    padding: 12px 0;
+    border-top: 1px solid #808080;
+    p {
+      font-size: 1.2rem;
+      color: #808080;
+    }
+  }
+}
 /*************** HOME PAGE *****************/
 .home {
   .banner {
@@ -623,7 +676,7 @@ img {
     background-image: url("images/bg-quite-rounded.png");
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 200px 0 300px 0;
+    padding: 200px 0 230px 0;
     .container {
       width: 50%;
       margin-left: unset;
@@ -634,7 +687,7 @@ img {
     }
   }
   .xp {
-    padding: 100px 0;
+    padding: 150px 0;
     .container {
       > div {
         width: 40%;
