@@ -53,3 +53,8 @@ if ( ! function_exists( 'wp_body_open' ) ){
 		do_action( 'wp_body_open' );
 	}
 }
+
+add_action('init', 'remove_editor_init');
+function remove_editor_init() {
+    remove_post_type_support('page', 'editor');
+}

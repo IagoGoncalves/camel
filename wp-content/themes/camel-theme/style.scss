@@ -389,6 +389,12 @@ img {
     }
   }
 }
+.internal-header {
+  background-color: var(--camel-primary1);
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #3e3e3e;
+}
 /**************** Footer *******************/
 .site-footer {
   background-color: var(--camel-primary1);
@@ -440,6 +446,26 @@ img {
     p {
       font-size: 1.2rem;
       color: #808080;
+    }
+  }
+}
+/************** Breadcrump ******************/
+.breadcrump {
+  background-image: url("images/internal-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: var(--camel-light2);
+  padding: 100px 0;
+  span {
+    margin-top: 20px;
+    gap: 5px;
+    a {
+      color: var(--camel-light2);
+      transition: all 0.2s;
+      &:hover {
+        color: var(--camel-secondary2);
+      }
     }
   }
 }
@@ -699,6 +725,26 @@ img {
           gap: 100px;
         }
       }
+    }
+  }
+}
+/************** ABOUT PAGE *****************/
+.about-page {
+  padding-top: 112px;
+  .history {
+    margin: 150px 0;
+    span {
+      display: block;
+      width: 43%;
+      h2 {
+        margin-bottom: 60px;
+        b {
+          color: var(--camel-secondary2);
+        }
+      }
+    }
+    img {
+      border-radius: 20px;
     }
   }
 }

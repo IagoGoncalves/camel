@@ -11,13 +11,27 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-    <div class="container-header">
-        <header class="align-between">
-            <div class="photo">
-				<img alt="Camel" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
-            </div>
-            <?php wp_nav_menu( array( 'theme_location' => 'wp_devs_main_menu', 'depth' => 2 )); ?>
-            <a href="#" class="btn-primary"><span>Orçamento</span></a>
-        </header>
-    </div>
+<?php wp_body_open(); 
+    if( is_page( 'home' )): ?>
+        <div class="container-header">
+            <header class="align-between">
+                <div class="photo">
+                    <img alt="Camel" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
+                </div>
+                <?php wp_nav_menu( array( 'theme_location' => 'wp_devs_main_menu', 'depth' => 2 )); ?>
+                <a href="#" class="btn-primary"><span>Orçamento</span></a>
+            </header>
+        </div>
+    <?php endif;
+    if( ! is_page( 'home' )): ?>
+        <div class="container-header internal-header">
+            <header class="align-between">
+                <div class="photo">
+                    <img alt="Camel" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
+                </div>
+                <?php wp_nav_menu( array( 'theme_location' => 'wp_devs_main_menu', 'depth' => 2 )); ?>
+                <a href="#" class="btn-primary"><span>Orçamento</span></a>
+            </header>
+        </div>
+    <?php endif; ?>
+    
