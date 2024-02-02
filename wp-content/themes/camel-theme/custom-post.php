@@ -39,7 +39,7 @@
         'description'       => 'Custom Post for services',
         'public'            => true,
         'show_in_nav_menus' => true,
-        'supports' => array('title', 'revisions'),
+        'supports' => array('title', 'revisions', 'thumbnail'),
         'menu_icon' => 'dashicons-admin-tools',
     );
     register_post_type('services', $args);

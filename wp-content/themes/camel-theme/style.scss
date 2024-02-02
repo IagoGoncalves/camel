@@ -813,3 +813,31 @@ img {
     }
   }
 }
+/************* SERVICES PAGE ***************/
+.services-page {
+  padding-top: 112px;
+  .container {
+    margin: 200px 0;
+    display: grid;
+    gap: 200px;
+    .align-between {
+      > div {
+        width: 40%;
+        p {
+          margin: 50px 0 75px;
+        }
+        span {
+          .second-a {
+            color: var(--camel-primary2);
+            &:hover {
+              color: var(--camel-secondary2);
+            }
+          }
+        }
+      }
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
