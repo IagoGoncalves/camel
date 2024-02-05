@@ -22,7 +22,7 @@ get_header(); ?>
                                         <h2 class="h2-bold-title"><?php the_title() ?></h2>
                                         <p class="h2-light"><?= get_field('sobre_o_servico'); ?></p>
                                         <span class="talk-us">
-                                            <a href="#" class="btn-primary"><span><?= get_field('texto_botao_1'); ?></span></a>
+                                            <a href="<?php the_permalink()?>" class="btn-primary"><span><?= get_field('texto_botao_1'); ?></span></a>
                                             <a href="#" class="second-a"><?= get_field('texto_botao_2'); ?></a>
                                         </span>
                                     </div>	

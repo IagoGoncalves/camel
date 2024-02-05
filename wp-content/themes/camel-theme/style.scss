@@ -383,6 +383,23 @@ img {
     position: relative;
   }
 }
+.galery-per-view {
+  overflow: hidden;
+  padding-bottom: 120px;
+  .swiper-wrapper {
+    gap: 30px;
+    .swiper-slide {
+      width: 23% !important;
+      img {
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+  .navigation {
+    position: relative;
+  }
+}
 /* Containers */
 .container {
   width: 100%;
@@ -753,23 +770,6 @@ img {
       margin: 55px 0 75px;
       width: 70%;
     }
-    .swiper-container {
-      overflow: hidden;
-      padding-bottom: 120px;
-      .swiper-wrapper {
-        gap: 30px;
-        .swiper-slide {
-          width: 23% !important;
-          img {
-            border-radius: 20px;
-            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-          }
-        }
-      }
-      .navigation {
-        position: relative;
-      }
-    }
   }
   .principles {
     background-image: url("images/bg-rounded.png");
@@ -840,4 +840,105 @@ img {
       }
     }
   }
+}
+/********* INTERNAL SERVICES PAGE **********/
+.service-page {
+  padding-top: 112px;
+  .whats-is-it {
+    margin: 120px 0;
+    .container {
+      span {
+        width: 50%;
+        h2 {
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+  .gallery {
+    background-image: url("images/bg-rounded.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 150px 0;
+    .container {
+      overflow: hidden;
+      .swiper-container {
+        padding-bottom: 105px;
+        .navigation {
+          top: 100px;
+          .swiper-button-prev,
+          .swiper-button-next {
+            &:after {
+              color: var(--camel-light2);
+              border: 2px solid var(--camel-light2);
+            }
+            &:hover {
+              &:after {
+                color: var(--camel-secondary2);
+                border: 2px solid var(--camel-secondary2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .step-of-process {
+    margin: 70px 0 150px;
+    > h2 {
+      text-align: center;
+      margin-bottom: 100px;
+    }
+    .container {
+      .column {
+        width: 24%;
+        display: grid;
+        gap: 60px;
+        span {
+          h3 {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .row2 {
+        display: block;
+        width: 34%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+      }
+      span {
+        h3 {
+          position: relative;
+          &:before {
+            content: "";
+            width: 50px;
+            height: 25px;
+            background-color: var(--camel-secondary2);
+            position: absolute;
+            top: 0;
+            left: -60px;
+            border-radius: 45px;
+          }
+        }
+      }
+    }
+  }
+  .flag-solutions {
+    padding: 75px 150px;
+    background-color: var(--camel-primary1);
+    border-radius: 20px;
+    margin-bottom: 200px;
+    > span {
+      color: var(--camel-light2);
+      p {
+        width: 65%;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+/*********** WORK WITH US PAGE *************/
+.workWithUS-page {
+  padding-top: 112px;
 }
