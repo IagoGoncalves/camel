@@ -58,11 +58,11 @@ get_header(); ?>
 							if($var->have_posts()):
 								while($var->have_posts()):
 									$var->the_post();?>																	
-										<div>
+										<a href="<?php the_permalink()?>">
 											<img src="<?= get_field('icone_servico'); ?>" alt="">
 											<h3 class="h1-bold"><?php the_title()?></h3>
 											<p class="h3-light"><?= get_field('sobre_o_servico'); ?></p>
-										</div>
+										</a>
 									<?php
 								endwhile;
 							endif;
