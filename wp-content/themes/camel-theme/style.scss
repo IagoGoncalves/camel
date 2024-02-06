@@ -941,4 +941,29 @@ img {
 /*********** WORK WITH US PAGE *************/
 .workWithUS-page {
   padding-top: 112px;
+  > div {
+    margin: 100px 0;
+    text-align: center;
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+  iframe {
+    width: 100%;
+  }
+}
+.budget-page {
+  padding-top: 112px;
+  > div {
+    margin: 100px 0;
+    span {
+      text-align: center;
+      h2 {
+        margin-bottom: 50px;
+      }
+    }
+    .wpcf7 {
+      margin-top: 100px;
+    }
+  }
 }
