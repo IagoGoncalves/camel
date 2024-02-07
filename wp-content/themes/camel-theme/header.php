@@ -13,7 +13,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); 
     if( is_page( 'home' )): ?>
-        <div class="container-header">
+        <div class="container-header" id="header-menu">
             <header class="align-between">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="photo">
                     <img alt="Camel" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>

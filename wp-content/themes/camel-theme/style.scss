@@ -206,6 +206,9 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 110%;
+  @media only screen and (max-width: 1200px) {
+    font-size: 1.8rem;
+  }
 }
 .h3-light {
   font-size: 1.62rem;
@@ -243,18 +246,27 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
+  @media only screen and (max-width: 1200px) {
+    font-size: 1.8rem;
+  }
 }
 .h2-bold-title {
   font-size: 4.8rem;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
+  @media only screen and (max-width: 1200px) {
+    font-size: 3.5rem;
+  }
 }
 .h2-bold-subtitle {
   font-size: 4rem;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
+  @media only screen and (max-width: 1200px) {
+    font-size: 2.8rem;
+  }
 }
 .h2-bold {
   font-size: 1.96rem;
@@ -340,6 +352,10 @@ img {
       left: 0px;
     }
   }
+  @media only screen and (max-width: 1200px) {
+    font-size: 1.6rem;
+    padding: 8px 30px;
+  }
 }
 .talk-us {
   display: flex;
@@ -351,6 +367,9 @@ img {
     transition: all 0.2s;
     &:hover {
       color: var(--camel-secondary2);
+    }
+    @media only screen and (max-width: 1200px) {
+      font-size: 1.6rem;
     }
   }
 }
@@ -408,10 +427,19 @@ img {
   margin-left: auto;
   padding-left: 170px;
   padding-right: 170px;
+  @media only screen and (max-width: 1500px) {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 /**************** Header *******************/
 .container-header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 9;
   padding: 15px 90px;
   header {
@@ -436,12 +464,26 @@ img {
       }
     }
   }
+  @media only screen and (max-width: 1250px) {
+    padding: 15px 50px;
+    header {
+      .menu-main-menu-container {
+        ul {
+          gap: 40px;
+          li {
+            a {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .internal-header {
   background-color: var(--camel-primary1);
-  position: fixed;
-  width: 100%;
   border-bottom: 1px solid #3e3e3e;
+  box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.75);
 }
 /**************** Footer *******************/
 .site-footer {
@@ -487,6 +529,11 @@ img {
       display: grid;
       gap: 10px;
     }
+    @media only screen and (max-width: 1200px) {
+      img {
+        width: 20%;
+      }
+    }
   }
   .copyright {
     padding: 12px 0;
@@ -522,7 +569,7 @@ img {
   .banner {
     width: 100%;
     position: relative;
-    top: -180px;
+    top: -75px;
     .swiper-container {
       .swiper-wrapper {
         overflow: hidden !important;
@@ -551,6 +598,12 @@ img {
                 &:hover {
                   color: var(--camel-secondary2);
                 }
+              }
+            }
+            @media only screen and (max-width: 1550px) {
+              h2 {
+                font-size: 4rem;
+                margin-bottom: 50px;
               }
             }
           }
@@ -600,6 +653,28 @@ img {
         }
       }
     }
+    @media only screen and (max-width: 1210px) {
+      top: 0px;
+      margin-bottom: 100px;
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            .description {
+              h2 {
+                font-size: 3rem;
+              }
+              > span {
+                .contact-us {
+                  font-size: 1.6rem;
+                  margin-left: 20px;
+                  padding: 8px 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .our-services {
     margin: 30px 0 150px;
@@ -608,6 +683,7 @@ img {
         text-align: center;
       }
       > article {
+        gap: 30px;
         a {
           position: relative;
           background-color: var(--camel-primary2);
@@ -658,6 +734,20 @@ img {
             }
           }
         }
+        @media only screen and (max-width: 1500px) {
+          > a {
+            padding: 30px;
+          }
+        }
+        @media only screen and (max-width: 1200px) {
+          gap: 20px;
+          > a {
+            padding: 15px;
+            img {
+              width: 30%;
+            }
+          }
+        }
       }
     }
   }
@@ -667,6 +757,7 @@ img {
     background-repeat: no-repeat;
     padding: 165px 0;
     .container {
+      gap: 30px;
       > div {
         width: 36%;
         h2 {
@@ -680,11 +771,21 @@ img {
       img {
         border-radius: 35px;
       }
+      @media only screen and (max-width: 1360px) {
+        div,
+        img {
+          width: 50%;
+        }
+      }
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 70px 0;
     }
   }
   .fork-lift {
     margin: 100px 0;
     .container {
+      gap: 30px;
       > div {
         width: 40%;
         > p {
@@ -713,13 +814,21 @@ img {
           }
         }
       }
+      @media only screen and (max-width: 1500px) {
+        > div {
+          width: 50%;
+        }
+        > img {
+          width: 50%;
+        }
+      }
     }
   }
   .interest {
     background-image: url("images/bg-quite-rounded.png");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    padding: 200px 0 230px 0;
+    padding: 210px 0 230px 0;
     .container {
       width: 50%;
       margin-left: unset;
@@ -728,10 +837,30 @@ img {
         margin-bottom: 70px;
       }
     }
+    @media only screen and (max-width: 1630px) {
+      .container {
+        padding-right: unset;
+      }
+    }
+    @media only screen and (max-width: 1500px) {
+      padding: 151px 0 138px 0;
+      .container {
+        h2 {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    @media only screen and (max-width: 1250px) {
+      padding: 121px 0;
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 137px 0;
+    }
   }
   .xp {
     padding: 150px 0;
     .container {
+      gap: 30px;
       > div {
         width: 40%;
         p {
@@ -740,6 +869,21 @@ img {
         .companies {
           display: flex;
           gap: 100px;
+        }
+      }
+      @media only screen and (max-width: 1300px) {
+        > img {
+          width: 50%;
+        }
+      }
+      @media only screen and (max-width: 1060px) {
+        > div {
+          .companies {
+            gap: 30px;
+            img {
+              width: 15%;
+            }
+          }
         }
       }
     }

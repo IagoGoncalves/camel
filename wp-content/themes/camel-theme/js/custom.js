@@ -32,4 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // },    
     });
 
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 200) {
+            document.getElementById("header-menu").classList.add("internal-header");
+        } else {
+            document.getElementById("header-menu").classList.remove("internal-header");
+        }
+    });
+    
 });
