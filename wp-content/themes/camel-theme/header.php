@@ -18,7 +18,12 @@
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="photo">
                     <img alt="Camel" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
                 </a>
-                <?php wp_nav_menu( array( 'theme_location' => 'wp_devs_main_menu', 'depth' => 2 )); ?>
+                <div class="mobile-menu-toggle mobile-version">
+                    <div class="hamburger"></div>
+                </div>
+                <nav class="menu-main-menu-container">
+                    <?php wp_nav_menu( array( 'theme_location' => 'camel_main_menu', 'depth' => 2 )); ?>
+                </nav>
                 <a href="<?php echo esc_url( home_url( '/orcamento' ) ); ?>" class="btn-primary desktop-version"><span>Orçamento</span></a>
             </header>
         </div>

@@ -32,7 +32,7 @@
     $services = array(
         'name'          => _x('Services', 'post type general name'),
         'singular_name' => _x('Service', 'post type singular name'),
-        'menu_name'     => 'Services',
+        'menu_name'     => 'Serviços',
     );
     $args = array(
         'labels'            => $services,

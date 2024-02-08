@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
+    var hamburger = document.querySelector(".hamburger");
+    var mobileMenuToggle = document.querySelector(".menu-main-menu-container");
+
+    hamburger.addEventListener("click", function() {
+        mobileMenuToggle.classList.toggle("active-menu");
+        hamburger.classList.toggle("cross-menu");
+    });
+
     var swiper = new Swiper('.banner-home', {
         speed: 5000,
         loop: true,
