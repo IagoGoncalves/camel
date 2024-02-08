@@ -19,7 +19,7 @@
                     <img alt="Camel" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
                 </a>
                 <?php wp_nav_menu( array( 'theme_location' => 'wp_devs_main_menu', 'depth' => 2 )); ?>
-                <a href="<?php echo esc_url( home_url( '/orcamento' ) ); ?>" class="btn-primary"><span>Orçamento</span></a>
+                <a href="<?php echo esc_url( home_url( '/orcamento' ) ); ?>" class="btn-primary desktop-version"><span>Orçamento</span></a>
             </header>
         </div>
     <?php endif;

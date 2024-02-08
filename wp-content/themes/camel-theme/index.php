@@ -19,6 +19,7 @@ get_header(); ?>
 									$var->the_post();?>																	
 										<div class="swiper-slide">
 											<?= get_the_post_thumbnail(get_the_ID());?>
+											<img src="<?= get_field('banner_mobile'); ?>" class="mobile-version" alt="">
 											<div class="description">
 												<h2><?php the_title()?></h2>
 												<span>

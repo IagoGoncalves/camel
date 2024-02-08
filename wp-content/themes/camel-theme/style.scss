@@ -420,6 +420,23 @@ img {
     position: relative;
   }
 }
+/* Hidden Control */
+.desktop-version {
+  @media only screen and (min-width: 771px) {
+    display: block;
+  }
+  @media only screen and (max-width: 770px) {
+    display: none;
+  }
+}
+.mobile-version {
+  @media only screen and (min-width: 771px) {
+    display: none;
+  }
+  @media only screen and (max-width: 770px) {
+    display: block;
+  }
+}
 /* Containers */
 .container {
   width: 100%;
@@ -438,6 +455,10 @@ img {
   @media only screen and (max-width: 990px) {
     padding-left: 50px;
     padding-right: 50px;
+  }
+  @media only screen and (max-width: 770px) {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 /**************** Header *******************/
@@ -679,6 +700,56 @@ img {
         }
       }
     }
+    @media only screen and (max-width: 990px) {
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            .description {
+              width: 43%;
+              left: 6%;
+              h2 {
+                font-size: 2rem;
+              }
+              > span {
+                .contact-us {
+                  font-size: 1.6rem;
+                  margin-left: 0px;
+                  padding: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 770px) {
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            .attachment-post-thumbnail {
+              display: none;
+            }
+            .description {
+              width: 70%;
+              left: 14%;
+              top: 20%;
+              h2 {
+                text-align: center;
+              }
+              span {
+                justify-content: center;
+                .contact-us {
+                  margin-left: 15px;
+                }
+              }
+            }
+          }
+        }
+        .swiper-pagination {
+          right: 3%;
+        }
+      }
+    }
   }
   .our-services {
     margin: 30px 0 150px;
@@ -752,6 +823,21 @@ img {
             }
           }
         }
+        @media only screen and (max-width: 990px) {
+          flex-wrap: wrap;
+          margin-top: 40px;
+          a {
+            width: 45%;
+            height: 320px;
+            img {
+              width: 20%;
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+              margin-top: 0px;
+            }
+          }
+        }
       }
     }
   }
@@ -784,6 +870,24 @@ img {
     }
     @media only screen and (max-width: 1200px) {
       padding: 70px 0;
+    }
+    @media only screen and (max-width: 990px) {
+      .container {
+        flex-direction: column;
+        > div {
+          width: 100%;
+          text-align: center;
+          > p {
+            margin: 15px 0 30px;
+          }
+          .talk-us {
+            justify-content: center;
+          }
+        }
+        img {
+          display: none;
+        }
+      }
     }
   }
   .fork-lift {
@@ -826,6 +930,21 @@ img {
           width: 50%;
         }
       }
+      @media only screen and (max-width: 990px) {
+        > img {
+          display: none;
+        }
+        > div {
+          width: 100%;
+          text-align: center;
+          .certifications {
+            justify-content: center;
+          }
+          .talk-us {
+            justify-content: center;
+          }
+        }
+      }
     }
   }
   .interest {
@@ -860,6 +979,20 @@ img {
     @media only screen and (max-width: 1200px) {
       padding: 137px 0;
     }
+    @media only screen and (max-width: 1024px) {
+      padding: 90px 0;
+    }
+    @media only screen and (max-width: 990px) {
+      padding: 64px 0;
+      .container {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+    // @media only screen and (max-width: 600px) {
+    //   background-image: url("images/work-with-us-mobile.png");
+    // }
   }
   .xp {
     padding: 150px 0;
@@ -886,6 +1019,21 @@ img {
             gap: 30px;
             img {
               width: 15%;
+            }
+          }
+        }
+      }
+      @media only screen and (max-width: 990px) {
+        > img {
+          display: none;
+        }
+        > div {
+          width: 100%;
+          text-align: center;
+          .companies {
+            justify-content: center;
+            img {
+              width: 10%;
             }
           }
         }

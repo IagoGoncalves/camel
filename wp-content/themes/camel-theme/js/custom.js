@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
               return '<span class="' + className + '">' + (index + 1) + "</span>";
             },
           },
-        autoplay: {
-            delay: 2500,
-        },    
+        // autoplay: {
+        //     delay: 2500,
+        // },    
     });
     var swiper = new Swiper('.galery-per-view', {
         speed: 5000,
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
         //     delay: 2500,
         // },    
     });
-
     window.addEventListener('scroll', function () {
         if (window.scrollY > 200) {
             document.getElementById("header-menu").classList.add("internal-header");
@@ -39,5 +38,4 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("header-menu").classList.remove("internal-header");
         }
     });
-    
 });

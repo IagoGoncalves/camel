@@ -24,7 +24,7 @@
         'description'       => 'Custom Post for banner',
         'public'            => true,
         'show_in_nav_menus' => true,
-        'supports' => array('title','revisions', 'thumbnail'),
+        'supports' => array('title', 'thumbnail'),
         'menu_icon' => 'dashicons-format-image',
     );
     register_post_type('banner', $args);
