@@ -21,9 +21,7 @@
                 <div class="mobile-menu-toggle mobile-version">
                     <div class="hamburger"></div>
                 </div>
-                <nav class="menu-main-menu-container">
-                    <?php wp_nav_menu( array( 'theme_location' => 'camel_main_menu', 'depth' => 2 )); ?>
-                </nav>
+                <?php wp_nav_menu( array( 'theme_location' => 'camel_main_menu', 'depth' => 2 )); ?>
                 <a href="<?php echo esc_url( home_url( '/orcamento' ) ); ?>" class="btn-primary desktop-version"><span>Orçamento</span></a>
             </header>
         </div>
