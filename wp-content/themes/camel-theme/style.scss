@@ -258,10 +258,13 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
+  @media only screen and (max-width: 1500px) {
+    font-size: 4rem;
+  }
   @media only screen and (max-width: 1200px) {
     font-size: 3.5rem;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 770px) {
     font-size: 2.8rem;
   }
 }
@@ -540,6 +543,9 @@ img {
               color: var(--camel-secondary2);
             }
           }
+          &:last-child {
+            display: none;
+          }
         }
       }
     }
@@ -577,6 +583,9 @@ img {
           padding: 30px;
           display: grid;
           text-align: center;
+          li:last-child {
+            display: block;
+          }
         }
       }
       .photo {
@@ -706,6 +715,9 @@ img {
         color: var(--camel-secondary2);
       }
     }
+  }
+  @media only screen and (max-width: 770px) {
+    padding: 50px 0;
   }
 }
 /*************** HOME PAGE *****************/
@@ -1274,13 +1286,12 @@ img {
         width: 100%;
       }
     }
-    @media only screen and (max-width: 770px) {
-    }
   }
   .principles {
     background-image: url("images/bg-rounded.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     padding: 180px 0;
     h2 {
       text-align: center;
@@ -1364,6 +1375,9 @@ img {
       }
     }
   }
+  @media only screen and (max-width: 990px) {
+    padding-top: 80px;
+  }
 }
 /************* SERVICES PAGE ***************/
 .services-page {
@@ -1373,8 +1387,12 @@ img {
     display: grid;
     gap: 200px;
     .align-between {
+      gap: 50px;
       > div {
         width: 40%;
+        > img {
+          display: none;
+        }
         p {
           margin: 50px 0 75px;
         }
@@ -1389,6 +1407,78 @@ img {
       }
       &:nth-child(even) {
         flex-direction: row-reverse;
+      }
+    }
+  }
+  @media only screen and (max-width: 1500px) {
+    .container {
+      margin: 150px 0;
+      .align-between {
+        > img {
+          width: 50%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .container {
+      margin: 100px 0;
+      gap: 100px;
+      .align-between {
+        > img {
+          width: 50%;
+        }
+        > div {
+          width: 50%;
+          p {
+            margin: 15px 0 40px;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 990px) {
+    padding-top: 80px;
+    .container {
+      .align-between {
+        > img {
+          display: none;
+        }
+        > div {
+          width: 100%;
+          text-align: center;
+          img {
+            display: block;
+            width: 70%;
+            margin: 20px auto 0 auto;
+          }
+          p {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          span {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .container {
+      margin: 70px 0;
+      .align-between {
+        > div {
+          width: 100%;
+          text-align: center;
+          img {
+            display: block;
+            width: 100%;
+          }
+          p {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -1608,6 +1698,15 @@ img {
   iframe {
     width: 100%;
   }
+  @media only screen and (max-width: 990px) {
+    padding-top: 80px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding-top: 80px;
+    > div {
+      margin: 70px 0;
+    }
+  }
 }
 .budget-page {
   padding-top: 112px;
@@ -1683,6 +1782,50 @@ img {
                   background-color: var(--camel-primary2);
                   color: var(--camel-light2);
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 990px) {
+    padding-top: 80px;
+    > div {
+      form {
+        width: 100% !important;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    > div {
+      margin: 70px 0;
+      .wpcf7 {
+        margin-top: 70px !important;
+        form {
+          width: 100% !important;
+          > div {
+            flex-wrap: wrap;
+            label {
+              font-size: 1.8rem !important;
+            }
+            p {
+              width: 100%;
+            }
+            input,
+            select {
+              font-size: 1.6rem;
+              height: 30px !important;
+              width: 100%;
+            }
+          }
+          .row2 {
+            margin: 35px 0;
+          }
+          .row3 {
+            > p {
+              > input {
+                padding: 5px 30px !important;
               }
             }
           }

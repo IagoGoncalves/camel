@@ -1,7 +1,5 @@
 <?php
 
-require get_template_directory() . '/inc/customizer.php';
-
 function camel_load_scripts(){
     wp_enqueue_style( 'swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '' );
     wp_enqueue_script( 'swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '', true );
