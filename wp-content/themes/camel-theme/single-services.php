@@ -40,33 +40,41 @@
             <div class="container">
                 <div class="row align-between">
                     <div class="column">
-                        <span>
-                            <h3 class="h1-bold"><?= get_field('etapa_1_do_processo'); ?></h3>
-                            <p class="h2-light"><?= get_field('texto_etapa_1'); ?></p>
-                        </span>
-                        <span>
-                            <h3 class="h1-bold"><?= get_field('etapa_2_do_processo'); ?></h3>
-                            <p class="h2-light"><?= get_field('texto_etapa_2'); ?></p>
-                        </span>
+                        <?php if (get_field('etapa_1_do_processo') !== "") { ?>
+                            <span>
+                                <h3 class="h1-bold"><?= get_field('etapa_1_do_processo'); ?></h3>
+                                <p class="h2-light"><?= get_field('texto_etapa_1'); ?></p>
+                            </span>
+                        <?php  } if (get_field('etapa_2_do_processo') !== "") { ?>
+                            <span>
+                                <h3 class="h1-bold"><?= get_field('etapa_2_do_processo'); ?></h3>
+                                <p class="h2-light"><?= get_field('texto_etapa_2'); ?></p>
+                            </span>
+                        <?php  } ?>
                     </div>
                     <div class="wrapper-img">
                         <img src="<?= get_field('imagem_etapas'); ?>" alt="">
                     </div>
                     <div class="column">
-                        <span>
-                            <h3 class="h1-bold"><?= get_field('etapa_3_do_processo'); ?></h3>
-                            <p class="h2-light"><?= get_field('texto_etapa_3'); ?></p>
-                        </span>
-                        <span>
-                            <h3 class="h1-bold"><?= get_field('etapa_4_do_processo'); ?></h3>
-                            <p class="h2-light"><?= get_field('texto_etapa_4'); ?></p>
-                        </span>
+                        <?php if (get_field('etapa_3_do_processo') !== "") { ?>
+                            <span>
+                                <h3 class="h1-bold"><?= get_field('etapa_3_do_processo'); ?></h3>
+                                <p class="h2-light"><?= get_field('texto_etapa_3'); ?></p>
+                            </span>
+                        <?php  } if (get_field('etapa_4_do_processo') !== "") { ?>
+                            <span>
+                                <h3 class="h1-bold"><?= get_field('etapa_4_do_processo'); ?></h3>
+                                <p class="h2-light"><?= get_field('texto_etapa_4'); ?></p>
+                            </span>
+                        <?php  } ?>
                     </div>
                 </div>
-                <span class="row2">
-                    <h3 class="h1-bold"><?= get_field('etapa_5_do_processo'); ?></h3>
-                    <p class="h2-light"><?= get_field('texto_etapa_5'); ?></p>
-                </span>
+                <?php if (get_field('etapa_5_do_processo') !== "") { ?>
+                    <span class="row2">
+                        <h3 class="h1-bold"><?= get_field('etapa_5_do_processo'); ?></h3>
+                        <p class="h2-light"><?= get_field('texto_etapa_5'); ?></p>
+                    </span>
+                <?php  } ?>
             </div>
         </section>
         <div class="container">

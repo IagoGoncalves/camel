@@ -8,15 +8,14 @@
             <div class="services">
                 <h2>Serviços</h2>
                 <nav>
-                    <a href="#">Auxiliar Logístico</a>
-                    <a href="#">Operador de Empilhadeiras</a>
-                    <a href="#">Operação Logística</a>
-                    <a href="#">Auxiliar de descarga de material</a>
+                    <a href="<?php echo esc_url( home_url( '/auxiliar-logistico' ) ); ?>">Auxiliar Logístico</a>
+                    <a href="<?php echo esc_url( home_url( '/operador-de-empilhadeiras' ) ); ?>">Operador de Empilhadeiras</a>
+                    <a href="<?php echo esc_url( home_url( '/operacao-logistica' ) ); ?>">Operação Logística</a>
+                    <a href="<?php echo esc_url( home_url( '/auxiliar-de-descarga-de-material' ) ); ?>">Auxiliar de descarga de material</a>
                 </nav>
             </div>
             <div class="contact">
                 <h2>Contato</h2> 
-
                 <?php $args = array('post_type' => 'dados', 'posts_per_page' => 1);
                     $var = new WP_Query($args);
                         if($var->have_posts()):
