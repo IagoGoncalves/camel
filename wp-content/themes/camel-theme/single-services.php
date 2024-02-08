@@ -7,7 +7,9 @@
                     <h2 class="h2-bold-title"><?= get_field('o_que_e'); ?></h2>
                     <p class="h2-light"><?= get_field('descritivo_do_servico'); ?></p>
                 </span>
-				<img src="<?= get_field('imagem_servico'); ?>" alt="">
+                <div class="wrapper-img">
+                    <img src="<?= get_field('imagem_servico'); ?>" alt="">
+                </div>
             </div>
         </section>
         <section class="gallery">
@@ -47,7 +49,9 @@
                             <p class="h2-light"><?= get_field('texto_etapa_2'); ?></p>
                         </span>
                     </div>
-                    <img src="<?= get_field('imagem_etapas'); ?>" alt="">
+                    <div class="wrapper-img">
+                        <img src="<?= get_field('imagem_etapas'); ?>" alt="">
+                    </div>
                     <div class="column">
                         <span>
                             <h3 class="h1-bold"><?= get_field('etapa_3_do_processo'); ?></h3>

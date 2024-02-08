@@ -694,8 +694,9 @@ img {
   background-position: center;
   text-align: center;
   color: var(--camel-light2);
-  padding: 100px 0;
+  padding: 100px 10px;
   span {
+    flex-wrap: wrap;
     margin-top: 20px;
     gap: 5px;
     a {
@@ -1397,11 +1398,44 @@ img {
   padding-top: 112px;
   .whats-is-it {
     margin: 120px 0;
+    @media only screen and (max-width: 1024px) {
+      margin: 80px 0;
+    }
+    @media only screen and (max-width: 770px) {
+      margin: 50px 0px;
+    }
+
     .container {
+      gap: 3rem;
       span {
         width: 50%;
         h2 {
           margin-bottom: 60px;
+        }
+      }
+      .wrapper-img {
+        max-width: 745px;
+        img {
+          width: 100%;
+          border-radius: 20px;
+        }
+      }
+      @media only screen and (max-width: 1024px) {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        margin: 80px 0;
+        span {
+          width: 100%;
+          h2 {
+            margin-bottom: 30px;
+          }
+        }
+      }
+      @media only screen and (max-width: 770px) {
+        margin: 50px 0 10px;
+        span {
+          min-width: 100%;
         }
       }
     }
@@ -1411,6 +1445,9 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 150px 0;
+    @media only screen and (max-width: 1024px) {
+      padding: 80px 0;
+    }
     .container {
       overflow: hidden;
       .swiper-container {
@@ -1440,6 +1477,12 @@ img {
       text-align: center;
       margin-bottom: 100px;
     }
+    @media only screen and (max-width: 770px) {
+      margin: 30px 0 100px;
+      > h2 {
+        margin-bottom: 50px;
+      }
+    }
     .container {
       .column {
         width: 24%;
@@ -1451,6 +1494,12 @@ img {
           }
         }
       }
+      .wrapper-img {
+        width: 40%;
+        img {
+          width: 100%;
+        }
+      }
       .row2 {
         display: block;
         width: 34%;
@@ -1458,6 +1507,7 @@ img {
         margin-left: auto;
         margin-top: 50px;
       }
+
       span {
         h3 {
           position: relative;
@@ -1473,6 +1523,46 @@ img {
           }
         }
       }
+      @media only screen and (max-width: 1024px) {
+        .row {
+          align-items: start;
+          flex-wrap: wrap;
+          gap: 2rem;
+          .column {
+            width: 45%;
+          }
+        }
+        .wrapper-img {
+          order: -1;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 2rem;
+          img {
+            max-width: 535px;
+          }
+        }
+        span {
+          margin-left: 60px;
+        }
+      }
+      @media only screen and (max-width: 770px) {
+        .row {
+          gap: 2rem;
+          .column {
+            gap: 2rem;
+            width: 100%;
+          }
+        }
+        .row2 {
+          display: block;
+          width: 100%;
+          margin-top: 2rem;
+          h3,
+          p {
+            margin-left: 60px;
+          }
+        }
+      }
     }
   }
   .flag-solutions {
@@ -1485,6 +1575,22 @@ img {
       p {
         width: 65%;
         margin-top: 20px;
+      }
+    }
+    @media only screen and (max-width: 1024px) {
+      padding: 75px;
+    }
+    @media only screen and (max-width: 770px) {
+      padding: 50px 30px;
+      margin-bottom: 80px;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+      > span {
+        p {
+          width: 100%;
+        }
       }
     }
   }
