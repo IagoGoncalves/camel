@@ -209,6 +209,9 @@ body {
   @media only screen and (max-width: 1200px) {
     font-size: 1.8rem;
   }
+  @media only screen and (max-width: 600px) {
+    font-size: 1.6rem;
+  }
 }
 .h3-light {
   font-size: 1.62rem;
@@ -258,6 +261,9 @@ body {
   @media only screen and (max-width: 1200px) {
     font-size: 3.5rem;
   }
+  @media only screen and (max-width: 600px) {
+    font-size: 2.8rem;
+  }
 }
 .h2-bold-subtitle {
   font-size: 4rem;
@@ -266,6 +272,9 @@ body {
   line-height: 110%;
   @media only screen and (max-width: 1200px) {
     font-size: 2.8rem;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 2.4rem;
   }
 }
 .h2-bold {
@@ -526,7 +535,27 @@ img {
           }
         }
       }
-      @media only screen and (max-width: 770px) {
+    }
+  }
+  @media only screen and (max-width: 1250px) {
+    padding: 15px 50px;
+    header {
+      .menu-main-menu-container {
+        ul {
+          gap: 40px;
+          li {
+            a {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 770px) {
+    padding: 10px 25px;
+    header {
+      .menu-main-menu-container {
         position: absolute;
         background: var(--camel-primary1);
         left: 0%;
@@ -543,19 +572,9 @@ img {
           text-align: center;
         }
       }
-    }
-  }
-  @media only screen and (max-width: 1250px) {
-    padding: 15px 50px;
-    header {
-      .menu-main-menu-container {
-        ul {
-          gap: 40px;
-          li {
-            a {
-              font-size: 1.6rem;
-            }
-          }
+      .photo {
+        img {
+          width: 75%;
         }
       }
     }
@@ -623,6 +642,31 @@ img {
       .services,
       .contact {
         width: 25%;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      flex-wrap: wrap;
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      .fast-access,
+      .services,
+      .contact {
+        width: 100%;
+      }
+      .services {
+        margin: 30px 0;
+      }
+      .contact {
+        h2 {
+          margin-bottom: 5px;
+        }
+      }
+      h2 {
+        margin-bottom: 15px;
+      }
+      a {
+        font-size: 16px;
       }
     }
   }
@@ -910,6 +954,28 @@ img {
         }
       }
     }
+    @media only screen and (max-width: 600px) {
+      margin: 50px 0;
+      .container {
+        > article {
+          a {
+            flex-direction: row;
+            width: 100%;
+            height: auto;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 25px;
+            justify-content: flex-start;
+            img {
+              width: 8%;
+            }
+            &:after {
+              content: unset;
+            }
+          }
+        }
+      }
+    }
   }
   .about {
     background-image: url("images/bg-rounded.png");
@@ -958,6 +1024,10 @@ img {
           display: none;
         }
       }
+    }
+    @media only screen and (max-width: 600px) {
+      background-image: url("images/mobile-bg-rounded.png");
+      background-position: center;
     }
   }
   .fork-lift {
@@ -1016,6 +1086,23 @@ img {
         }
       }
     }
+    @media only screen and (max-width: 600px) {
+      margin: 50px 0;
+
+      .container {
+        > div {
+          .certifications {
+            justify-content: center;
+            p {
+              font-size: 16px;
+            }
+            img {
+              width: 13%;
+            }
+          }
+        }
+      }
+    }
   }
   .interest {
     background-image: url("images/bg-quite-rounded.png");
@@ -1043,14 +1130,11 @@ img {
         }
       }
     }
-    @media only screen and (max-width: 1250px) {
-      padding: 121px 0;
-    }
-    @media only screen and (max-width: 1200px) {
-      padding: 137px 0;
-    }
     @media only screen and (max-width: 1024px) {
-      padding: 90px 0;
+      padding: 78px 0;
+      .container {
+        padding-top: 25px;
+      }
     }
     @media only screen and (max-width: 990px) {
       padding: 73px 0;
@@ -1060,9 +1144,19 @@ img {
         }
       }
     }
-    // @media only screen and (max-width: 770px) {
-    //   background-image: url("images/work-with-us-mobile.png");
-    // }
+    @media only screen and (max-width: 770px) {
+      background-image: url("images/work-with-us-mobile.png");
+      background-size: cover;
+      background-position: center;
+      .container {
+        width: 100%;
+        padding: 50px 25px 200px;
+        text-align: center;
+        a {
+          margin: 0 auto;
+        }
+      }
+    }
   }
   .xp {
     padding: 150px 0;
@@ -1108,6 +1202,9 @@ img {
           }
         }
       }
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 50px 0;
     }
   }
 }
