@@ -417,10 +417,17 @@ img {
 .galery-per-view {
   overflow: hidden;
   padding-bottom: 120px;
+  @media only screen and (max-width: 770px) {
+    padding-bottom: 80px;
+  }
   .swiper-wrapper {
     gap: 30px;
     .swiper-slide {
       width: 23% !important;
+      @media only screen and (max-width: 770px) {
+        min-width: 150px;
+        width: 30% !important;
+      }
       img {
         border-radius: 20px;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -682,8 +689,9 @@ img {
 /************** Breadcrump ******************/
 .breadcrump {
   background-image: url("images/internal-bg.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
   color: var(--camel-light2);
   padding: 100px 0;
@@ -1211,11 +1219,14 @@ img {
 /************** ABOUT PAGE *****************/
 .about-page {
   padding-top: 112px;
+
   .history {
     margin: 150px 0;
+    gap: 2rem;
     span {
       display: block;
       width: 43%;
+      min-width: 380px;
       h2 {
         margin-bottom: 60px;
         b {
@@ -1223,8 +1234,30 @@ img {
         }
       }
     }
-    img {
-      border-radius: 20px;
+    .wrapper-img {
+      max-width: 745px;
+      img {
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+    @media only screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      margin: 80px 0;
+      span {
+        width: 100%;
+        h2 {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    @media only screen and (max-width: 770px) {
+      margin: 50px 0 80px;
+      span {
+        min-width: 100%;
+      }
     }
   }
   .solutions {
@@ -1232,6 +1265,15 @@ img {
     > p {
       margin: 55px 0 75px;
       width: 70%;
+    }
+    @media only screen and (max-width: 1024px) {
+      text-align: center;
+      p {
+        margin: 30px 0 50px;
+        width: 100%;
+      }
+    }
+    @media only screen and (max-width: 770px) {
     }
   }
   .principles {
@@ -1261,6 +1303,27 @@ img {
         }
       }
     }
+    @media only screen and (max-width: 1024px) {
+      padding: 120px 0;
+
+      .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5rem 1rem;
+        div {
+          min-width: 380px;
+        }
+      }
+    }
+    @media only screen and (max-width: 770px) {
+      .container {
+        width: 100%;
+        div {
+          min-width: 100%;
+          width: 100%;
+        }
+      }
+    }
   }
   .customers {
     margin: 50px 0 150px;
@@ -1273,6 +1336,31 @@ img {
       padding-left: 250px;
       padding-right: 250px;
       flex-wrap: wrap;
+    }
+    @media only screen and (max-width: 1024px) {
+      margin: 30px 0 100px;
+      .container {
+        justify-content: center;
+        gap: 80px 100px;
+        padding: 0 150px;
+        .wrapper-img {
+          width: 85px;
+          img {
+            object-fit: contain;
+            width: 100%;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 770px) {
+      margin: 30px 0 70px;
+      h2 {
+        margin-bottom: 70px;
+      }
+      .container {
+        gap: 50px;
+        padding: 0 25px;
+      }
     }
   }
 }

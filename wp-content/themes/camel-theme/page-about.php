@@ -12,7 +12,9 @@ get_header(); ?>
 					<h2 class="h2-bold-title">História da <b>Camel</b></h2>
 					<p class="h2-light"><?= get_field('texto_historia_camel'); ?></p>
 				</span>
-				<img src="<?= get_field('imagem_historia_camel'); ?>" alt="">
+				<div class="wrapper-img">
+					<img src="<?= get_field('imagem_historia_camel'); ?>" alt="">
+				</div>
 			</section>
 			<section class="solutions">
 				<h2 class="h2-bold-title"><?= get_field('titulo_solucoes'); ?></h2>
@@ -68,7 +70,7 @@ get_header(); ?>
 							$url_da_imagem = $imagem['url'];
 							$titulo_da_imagem = $imagem['title'];
 							$descricao_da_imagem = $imagem['description'];
-							echo '<img src="' . $url_da_imagem . '" alt="' . $titulo_da_imagem . '" title="' . $titulo_da_imagem . '" />';
+							echo '<div class="wrapper-img"><img src="' . $url_da_imagem . '" alt="' . $titulo_da_imagem . '" title="' . $titulo_da_imagem . '" /></div>';
 						}
 					}
 				?>
