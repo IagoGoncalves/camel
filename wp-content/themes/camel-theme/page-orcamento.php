@@ -66,7 +66,6 @@ get_header(); ?>
                     wp_reset_postdata(); 
                 ?>
             </div>
-            
     </main>
     <script>
         document.getElementById('submitForm').addEventListener('click', function(event) {
