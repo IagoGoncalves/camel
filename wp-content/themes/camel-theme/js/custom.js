@@ -54,15 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
               return '<span class="' + className + '">' + (index + 1) + "</span>";
             },
           },
-        autoplay: {
-            delay: 2500,
-        },    
+        // autoplay: {
+        //     delay: 2500,
+        // },    
       });
-
-      var tagLi = document.querySelector('li.classe-a-ser-adicionada');
-      if (tagLi) {
-          tagLi.classList.add('nova-classe');
-      }
     }
 
     document.querySelectorAll('.menu > li').forEach(function(li) {
