@@ -595,11 +595,22 @@ img {
       }
     }
   }
+  @media only screen and (max-width: 500px) {
+    padding: 10px;
+    header {
+      .photo {
+        width: 48%;
+      }
+    }
+  }
 }
 .internal-header {
   background-color: var(--camel-primary1);
   border-bottom: 1px solid #3e3e3e;
   box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.menu-li-active {
+  color: var(--camel-secondary2) !important;
 }
 /**************** Footer *******************/
 .site-footer {
@@ -718,6 +729,13 @@ img {
   }
   @media only screen and (max-width: 770px) {
     padding: 50px 0;
+  }
+  @media only screen and (max-width: 440px) {
+    position: relative;
+    top: -20px;
+  }
+  @media only screen and (max-width: 300px) {
+    top: -35px;
   }
 }
 /*************** HOME PAGE *****************/
@@ -885,6 +903,13 @@ img {
         }
       }
     }
+    @media only screen and (max-width: 500px) {
+      .swiper-container {
+        .swiper-pagination {
+          display: none;
+        }
+      }
+    }
   }
   .our-services {
     margin: 30px 0 150px;
@@ -995,6 +1020,11 @@ img {
             }
           }
         }
+      }
+    }
+    @media only screen and (max-width: 420px) {
+      .container article a > img {
+        display: none;
       }
     }
   }
@@ -1333,6 +1363,15 @@ img {
         div {
           min-width: 100%;
           width: 100%;
+          img {
+            width: 20%;
+          }
+          h3 {
+            margin: 5px 0 15px;
+          }
+          > p {
+            font-size: 1.6rem;
+          }
         }
       }
     }
@@ -1829,9 +1868,16 @@ img {
             margin: 35px 0;
           }
           .row3 {
-            > p {
+            p {
               > input {
                 padding: 5px 30px !important;
+              }
+              &:nth-child(2) {
+                width: 100%;
+                flex-direction: column;
+                input {
+                  height: auto;
+                }
               }
             }
           }
