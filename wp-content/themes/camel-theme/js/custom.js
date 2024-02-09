@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("header-menu").classList.remove("internal-header");
         }
       });
-
       var swiper = new Swiper('.banner-home', {
         speed: 5000,
         loop: true,
