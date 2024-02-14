@@ -11,7 +11,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); 
+<?php wp_body_open();
     if (is_page('home')): ?>
         <div class="container-header" id="header-menu">
             <header class="align-between">
@@ -39,4 +39,12 @@
                 <a href="<?php echo esc_url(home_url('/orcamento')); ?>" class="btn-primary desktop-version"><span><?php echo esc_html('Orçamento'); ?></span></a>
             </header>
         </div>
-    <?php endif; ?>
+    <?php endif; 
+    function formatarVariavel($variavel) {
+        $variavel = str_replace(' ', '', $variavel);
+        $variavel = str_replace('(', '', $variavel);
+        $variavel = str_replace(')', '', $variavel);
+        $variavel = str_replace('-', '', $variavel);
+    
+        return $variavel;
+    } ?>

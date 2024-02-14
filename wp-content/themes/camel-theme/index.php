@@ -28,7 +28,7 @@ get_header(); ?>
 										<?php } ?>
 
 										<?php if (get_field('txt-secondary-btn') !== "") { ?>
-											<a href="<?php echo esc_url(get_field('url-secondary-btn')); ?>" class="contact-us"><?php echo esc_html(get_field('txt-secondary-btn')); ?></a>
+											<a href="https://api.whatsapp.com/send?phone=55<?php echo esc_attr($whats); ?>&text=<?php echo urlencode('Olá, vim pelo site da Camel'); ?>" class="contact-us"><?php echo esc_html(get_field('txt-secondary-btn')); ?></a>
 										<?php } ?>
 									</span>
 								</div>
@@ -79,7 +79,7 @@ get_header(); ?>
 					<p class="h2-light"><?php echo esc_html(get_field('texto_sobre_a_camel')); ?></p>
 					<span class="talk-us">
 						<a href="<?php echo esc_url(get_field('saiba_mais')); ?>" class="btn-primary"><span><?php echo esc_html(get_field('nome_botao_1')); ?></span></a>
-						<a href="<?php echo esc_url(get_field('fale_conosco')); ?>" class="second-a"><?php echo esc_html(get_field('nome_botao_2')); ?></a>
+						<a href="https://api.whatsapp.com/send?phone=55<?php echo esc_attr($whats); ?>&text=<?php echo urlencode('Olá, vim pelo site da Camel'); ?>" class="second-a"><?php echo esc_html(get_field('nome_botao_2')); ?></a>
 					</span>
 				</div>
 				<img src="<?php echo esc_url(get_field('imagem_sobre_camel')); ?>" alt="">
@@ -99,7 +99,7 @@ get_header(); ?>
 					<hr>
 					<span class="talk-us">
 						<a href="<?php echo esc_url(get_field('saiba_mais')); ?>" class="btn-primary"><span><?php echo esc_html(get_field('empilhadeira_nome_botao_1')); ?></span></a>
-						<a href="<?php echo esc_url(get_field('fale_conosco')); ?>" class="second-a"><?php echo esc_html(get_field('empilhadeira_nome_botao_2')); ?></a>
+						<a href="https://api.whatsapp.com/send?phone=55<?php echo esc_attr($whats); ?>&text=<?php echo urlencode('Olá, vim pelo site da Camel'); ?>" class="second-a"><?php echo esc_html(get_field('empilhadeira_nome_botao_2')); ?></a>
 					</span>
 				</div>
 			</div>

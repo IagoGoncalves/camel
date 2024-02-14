@@ -48,15 +48,6 @@ get_header(); ?>
             </div>
             <div class="disabled" id="numeroDiv">
                 <?php 
-                    function formatarVariavel($variavel) {
-                        $variavel = str_replace(' ', '', $variavel);
-                        $variavel = str_replace('(', '', $variavel);
-                        $variavel = str_replace(')', '', $variavel);
-                        $variavel = str_replace('-', '', $variavel);
-                      
-                        return $variavel;
-                    }
-
                     $args = array('post_type' => 'dados', 'posts_per_page' => 1);
                     $var = new WP_Query($args);
                         if($var->have_posts()):
