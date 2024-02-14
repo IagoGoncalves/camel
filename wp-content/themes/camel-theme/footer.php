@@ -22,7 +22,7 @@
                     $var = new WP_Query($args);
                     if ($var->have_posts()) :
                         $var->the_post(); ?>																	
-                            <a href="<?php echo esc_url(get_field('endereco_url')); ?>" target="_blank"><?php echo esc_html(get_field('endereco')); ?></a>
+                            <a href="<?php echo esc_url(get_field('endereco_url')); ?>" target="_blank"><?php echo esc_html(get_field('endereco')); ?><br><?php echo esc_html(get_field('cidade')); ?></a>
                             <a href="tel:<?php echo esc_attr(get_field('numero_de_telefone')); ?>"><?php echo esc_html(get_field('numero_de_telefone')); ?></a>
                             <a href="https://api.whatsapp.com/send?phone=55<?php echo esc_attr(get_field('numero_de_celular')); ?>&text=<?php echo urlencode('Olá, vim pelo site da Camel'); ?>" target="_blank"><?php echo esc_html(get_field('numero_de_celular')); ?></a>
                         <?php
