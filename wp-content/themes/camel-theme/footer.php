@@ -31,7 +31,6 @@
                 ?>
             </div>
         </div>
-        
         <div class="copyright">
             <div class="container align-between">
                 <p>Copyright 2024 © Todos os direitos reservados.</p>
