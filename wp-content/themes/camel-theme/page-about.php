@@ -16,6 +16,7 @@ get_header(); ?>
                 <img src="<?php echo esc_url(get_field('imagem_historia_camel')); ?>" alt="">
             </div>
         </section>
+        <img class="forklift" alt="<?php echo esc_attr('Forklift'); ?>" loading="<?php echo esc_attr('lazy'); ?>" src="<?php echo esc_url(get_template_directory_uri() . '/images/forklift-vetor.png'); ?>"/>
         <section class="solutions">
             <h2 class="h2-bold-title"><?php echo esc_html(get_field('titulo_solucoes')); ?></h2>
             <p class="h2-light"><?php echo esc_html(get_field('texto_solucoes')); ?></p>

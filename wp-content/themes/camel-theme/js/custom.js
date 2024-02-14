@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     var swiper = new Swiper('.galery-per-view', {
         speed: 5000,
-        slidesPerView: 3,
+        slidesPerView: 4,
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
               slidesPerView: 1,
             },
             1024: {
-              slidesPerView: 2,
+              slidesPerView: 4,
             },
           },
-        // autoplay: {
-        //     delay: 2500,
-        // },    
+        autoplay: {
+            delay: 2500,
+        },    
     });
     
     var locale = window.location.pathname;
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
       var swiper = new Swiper('.banner-home', {
-        speed: 5000,
+        speed: 2500,
         loop: true,
         spaceBetween: 30,
         effect: 'fade',
@@ -53,9 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
               return '<span class="' + className + '">' + (index + 1) + "</span>";
             },
           },
-        // autoplay: {
-        //     delay: 2500,
-        // },    
+        autoplay: {
+            delay: 2500,
+        },    
       });
     }
 
