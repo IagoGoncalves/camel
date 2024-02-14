@@ -27,3 +27,7 @@ jobs:
             *.sql
             *.rar
             wp-config.php
+            wp-admin
+            wp-includes
+            wp-content/plugins
+            wp-content/mu-plugins
