@@ -30,8 +30,8 @@
         }
     </style>
 	<main id="site-em-construcao" class="site-em-construcao" tabindex="-1" role="main" style="text-align: center;">	
-		<img style="max-width: 100%;" src="<?php echo get_template_directory_uri(); ?>/images/construcao.jpg"/>
-        <h1>Site em Construção</h1>
-	</main><!-- #main -->
+        <img style="max-width: 100%;" src="<?php echo esc_url(get_template_directory_uri() . '/images/construcao.jpg'); ?>"/>
+        <h1><?php echo esc_html('Site em Construção'); ?></h1>
+    </main><!-- #main -->
 <?php
 

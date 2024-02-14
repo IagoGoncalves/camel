@@ -12,32 +12,31 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); 
-    if( is_page( 'home' )): ?>
+    if (is_page('home')): ?>
         <div class="container-header" id="header-menu">
             <header class="align-between">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="photo">
-                    <img alt="Camel" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="photo">
+                    <img alt="<?php echo esc_attr('Camel'); ?>" loading="<?php echo esc_attr('lazy'); ?>" src="<?php echo esc_url(get_template_directory_uri() . '/images/logo.png'); ?>"/>
                 </a>
                 <div class="mobile-menu-toggle mobile-version">
                     <div class="hamburger"></div>
                 </div>
-                <?php wp_nav_menu( array( 'theme_location' => 'camel_main_menu', 'depth' => 2 )); ?>
-                <a href="<?php echo esc_url( home_url( '/orcamento' ) ); ?>" class="btn-primary desktop-version"><span>Orçamento</span></a>
+                <?php wp_nav_menu(array('theme_location' => 'camel_main_menu', 'depth' => 2)); ?>
+                <a href="<?php echo esc_url(home_url('/orcamento')); ?>" class="btn-primary desktop-version"><span><?php echo esc_html('Orçamento'); ?></span></a>
             </header>
         </div>
     <?php endif;
-    if( ! is_page( 'home' )): ?>
+    if (!is_page('home')): ?>
         <div class="container-header internal-header">
             <header class="align-between">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="photo">
-                    <img alt="Camel" loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="photo">
+                    <img alt="<?php echo esc_attr('Camel'); ?>" loading="<?php echo esc_attr('lazy'); ?>" src="<?php echo esc_url(get_template_directory_uri() . '/images/logo.png'); ?>"/>
                 </a>
                 <div class="mobile-menu-toggle mobile-version">
                     <div class="hamburger"></div>
                 </div>
-                <?php wp_nav_menu( array( 'theme_location' => 'wp_devs_main_menu', 'depth' => 2 )); ?>
-                <a href="<?php echo esc_url( home_url( '/orcamento' ) ); ?>" class="btn-primary desktop-version"><span>Orçamento</span></a>
+                <?php wp_nav_menu(array('theme_location' => 'wp_devs_main_menu', 'depth' => 2)); ?>
+                <a href="<?php echo esc_url(home_url('/orcamento')); ?>" class="btn-primary desktop-version"><span><?php echo esc_html('Orçamento'); ?></span></a>
             </header>
         </div>
     <?php endif; ?>
-    

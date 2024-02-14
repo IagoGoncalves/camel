@@ -5,7 +5,7 @@
  */
 get_header(); ?>
     <main id="budget" class="budget-page" tabindex="-1" role="main">
-		<?php set_query_var('parameter', 'Orçamento'); get_template_part('parts/breadcrump');?>
+        <?php set_query_var('parameter', esc_html('Orçamento')); get_template_part('parts/breadcrump');?>
         <div class="container">
             <span>
                 <h2 class="h2-bold-title"><?= get_field('titulo_da_secao'); ?></h2>

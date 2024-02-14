@@ -36,7 +36,7 @@ function camel_config(){
         'flex-width'    => true
     ) );
     add_theme_support( 'automatic-feed-links' );
-    add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ));
+    add_theme_support( 'html5', array( 'gallery', 'caption', 'style', 'script' ));
     add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'camel_config', 0 );
