@@ -25,7 +25,7 @@ get_header(); ?>
                                 <p class="h2-light"><?php echo esc_html(get_field('sobre_o_servico')); ?></p>
                                 <span class="talk-us">
                                     <a href="<?php the_permalink()?>" class="btn-primary"><span><?php echo esc_html(get_field('texto_botao_1')); ?></span></a>
-                                    <a href="https://api.whatsapp.com/send?phone=55<?php echo esc_attr($whats); ?>&text=<?php echo urlencode('Olá, vim pelo site da Camel'); ?>" class="second-a"><?php echo esc_html(get_field('texto_botao_2')); ?></a>
+                                    <a href="https://api.whatsapp.com/send?phone=55<?php echo esc_attr($whats); ?>&text=<?php echo urlencode('Olá, vim pelo site da Camel e gostaria de falar sobre '); ?> <?php the_title()?>" class="second-a" target="_blank"><?php echo esc_html(get_field('texto_botao_2')); ?></a>
                                 </span>
                             </div>	
                         </div>
