@@ -5,7 +5,8 @@
  */
 get_header(); ?>
    	<main class="home" id="home">
-	   <section class="banner">
+		<?php $args = array('post_type' => 'dados', 'posts_per_page' => 1); $var = new WP_Query($args); if ($var->have_posts()) : $var->the_post(); $whats = formatarVariavel(strval(get_field('numero_de_celular'))); endif; wp_reset_postdata(); ?>
+	   	<section class="banner">
 			<div class="swiper-container banner-home">
 				<div class="swiper-wrapper">
 					<?php

@@ -5,6 +5,7 @@
  */
 get_header(); ?>
     <main id="services" class="services-page" tabindex="-1" role="main">
+		<?php $args = array('post_type' => 'dados', 'posts_per_page' => 1); $var = new WP_Query($args); if ($var->have_posts()) : $var->the_post(); $whats = formatarVariavel(strval(get_field('numero_de_celular'))); endif; wp_reset_postdata(); ?>
         <?php set_query_var('parameter', esc_html('Todos serviços')); get_template_part('parts/breadcrump');?>
         <div class="container">
             <?php
@@ -24,7 +25,7 @@ get_header(); ?>
                                 <p class="h2-light"><?php echo esc_html(get_field('sobre_o_servico')); ?></p>
                                 <span class="talk-us">
                                     <a href="<?php the_permalink()?>" class="btn-primary"><span><?php echo esc_html(get_field('texto_botao_1')); ?></span></a>
-                                    <a href="#" class="second-a"><?php echo esc_html(get_field('texto_botao_2')); ?></a>
+                                    <a href="https://api.whatsapp.com/send?phone=55<?php echo esc_attr($whats); ?>&text=<?php echo urlencode('Olá, vim pelo site da Camel'); ?>" class="second-a"><?php echo esc_html(get_field('texto_botao_2')); ?></a>
                                 </span>
                             </div>	
                         </div>
