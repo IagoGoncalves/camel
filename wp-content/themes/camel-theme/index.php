@@ -98,7 +98,7 @@ get_header(); ?>
 					</div>
 					<hr>
 					<span class="talk-us">
-						<a href="<?php echo esc_url(get_field('saiba_mais')); ?>" class="btn-primary"><span><?php echo esc_html(get_field('empilhadeira_nome_botao_1')); ?></span></a>
+						<a href="<?php echo esc_url(get_field('url_botao_1')); ?>" class="btn-primary"><span><?php echo esc_html(get_field('empilhadeira_nome_botao_1')); ?></span></a>
 						<a href="https://api.whatsapp.com/send?phone=55<?php echo esc_attr($whats); ?>&text=<?php echo urlencode('Olá, vim pelo site da Camel'); ?>" class="second-a"><?php echo esc_html(get_field('empilhadeira_nome_botao_2')); ?></a>
 					</span>
 				</div>
