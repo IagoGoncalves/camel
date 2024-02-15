@@ -768,6 +768,9 @@ img {
               }
             }
           }
+          img {
+            width: 100%;
+          }
         }
       }
       .swiper-pagination {
@@ -1186,6 +1189,9 @@ img {
         color: var(--camel-light2);
         margin-bottom: 70px;
       }
+    }
+    @media only screen and (min-width: 1920px) {
+      background-size: cover;
     }
     @media only screen and (max-width: 1630px) {
       .container {
