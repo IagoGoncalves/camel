@@ -116,10 +116,19 @@ get_header(); ?>
 				<div>
 					<h2 class="h2-bold-subtitle"><?php echo esc_html(get_field('titulo_experiencia_camel')); ?></h2>
 					<p class="h2-light"><?php echo esc_html(get_field('texto_experiencia_camel')); ?></p>
-					<div class="companies">
-						<img src="<?php echo esc_url(get_field('logo1')); ?>" alt="">
-						<img src="<?php echo esc_url(get_field('logo2')); ?>" alt="">
-						<img src="<?php echo esc_url(get_field('logo3')); ?>" alt="">
+					<div class="swiper-container client-slide">
+						<div class="swiper-wrapper align-between">
+							<?php 
+							$galery = get_field('galeria_clientes');
+							if ($galery) {
+								foreach ($galery as $imagem) {
+									$url_da_imagem = esc_url($imagem['url']);
+									$titulo_da_imagem = esc_attr($imagem['title']);
+									echo '<div class="swiper-slide"><img src="' . $url_da_imagem . '" alt="' . $titulo_da_imagem . '" title="' . $titulo_da_imagem . '" /></div>';
+								}
+							}
+							?>
+						</div>
 					</div>
 				</div>
 			</div>

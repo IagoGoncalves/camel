@@ -57,6 +57,23 @@ document.addEventListener('DOMContentLoaded', function () {
             delay: 2500,
         },    
       });
+
+      var swiper = new Swiper('.client-slide', {
+        speed: 5000,
+        slidesPerView: 2,
+        loop: true,
+        breakpoints: {
+            768: {
+              slidesPerView: 1,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          },
+        autoplay: {
+            delay: 2500,
+        },    
+      });
     }
 
     document.querySelectorAll('.menu > li').forEach(function(li) {
