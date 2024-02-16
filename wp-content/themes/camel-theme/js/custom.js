@@ -1,14 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     var hamburger = document.querySelector(".hamburger");
     var mobileMenuToggle = document.querySelector(".menu-main-menu-container");
-
     hamburger.addEventListener("click", function() {
         mobileMenuToggle.classList.toggle("active-menu");
         hamburger.classList.toggle("cross-menu");
     });
     
     var swiper = new Swiper('.galery-per-view', {
-        speed: 5000,
+        speed: 3000,
         slidesPerView: 4,
         loop: true,
         navigation: {
@@ -16,16 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-            768: {
-              slidesPerView: 1,
-            },
             1024: {
               slidesPerView: 4,
             },
+            768: {
+              slidesPerView: 1,
+            },
           },
-        autoplay: {
-            delay: 2500,
-        },    
+        // autoplay: {
+        //     delay: 2500,
+        // },    
     });
     
     var locale = window.location.pathname;

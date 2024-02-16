@@ -39,7 +39,11 @@ get_header(); ?>
                             <p><label> Cep:<br><span class="wpcf7-form-control-wrap" data-name="cep"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="name" aria-required="true" aria-invalid="false" value="" type="text" name="cep"></span></label></p>
                         </div>
                         <div class="row3">
-                            <p><label> Serviços:<br><span class="wpcf7-form-control-wrap" data-name="menu-86"><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="menu-86"><option value="item1">item1</option><option value="item2">item2</option><option value="item3">item3</option></select></span></label></p>
+                            <p><label> Serviços:<br><span class="wpcf7-form-control-wrap" data-name="menu-86"><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="menu-86">
+                                <?php $args = array('post_type' => 'services','posts_per_page' => -1); $var = new WP_Query($args); if($var->have_posts()): while($var->have_posts()): $var->the_post();?>    
+                                    <option value="<?php echo esc_attr(get_the_title()); ?>"><?php echo esc_html(get_the_title()); ?></option>
+                                <?php endwhile; endif; wp_reset_postdata();?>
+                            </select></span></label></p>
                             <a href="#" id="submitForm">Enviar orçamento</a>
                         </div>
                         <div class="wpcf7-response-output" aria-hidden="true"></div>

@@ -324,6 +324,7 @@ img {
     color: var(--camel-primary2);
     position: relative;
     z-index: 1;
+    transition: 0.3s;
   }
   &:before {
     content: "";
@@ -340,7 +341,6 @@ img {
   }
   &:hover {
     transition: 0.4s;
-    background-color: transparent;
     span {
       color: var(--camel-light2);
     }
@@ -410,17 +410,22 @@ img {
     padding-bottom: 80px;
   }
   .swiper-wrapper {
-    gap: 5px;
+    gap: 2%;
     .swiper-slide {
-      @media only screen and (max-width: 770px) {
+      width: 23.5% !important;
+      @media only screen and (max-width: 990px) {
         min-width: 150px;
-        width: 30% !important;
+        width: 31.8% !important;
+      }
+      @media only screen and (max-width: 500px) {
+        min-width: 150px;
+        width: 100% !important;
       }
       img {
         border-radius: 20px;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-        height: 400px;
-        width: 370px;
+        width: 100%;
+        height: auto;
       }
     }
   }
@@ -663,8 +668,15 @@ img {
       text-align: center;
       padding-top: 50px;
       padding-bottom: 50px;
+      > img {
+        display: block;
+        width: 49%;
+        margin: 0 auto 20px;
+      }
       .fast-access,
-      .services,
+      .services {
+        display: none;
+      }
       .contact {
         width: 100%;
       }
@@ -895,7 +907,7 @@ img {
     }
     @media only screen and (max-width: 500px) {
       top: -85px;
-      margin-bottom: 50px;
+      margin-bottom: 0px;
       .swiper-container {
         .swiper-wrapper {
           .swiper-slide {
@@ -1022,7 +1034,7 @@ img {
       }
     }
     @media only screen and (max-width: 600px) {
-      margin: 50px 0;
+      margin: 0px 0 50px;
       .container {
         > article {
           a {
@@ -1226,7 +1238,7 @@ img {
       background-position: center;
       .container {
         width: 100%;
-        padding: 50px 25px 200px;
+        padding: 0px 25px 200px;
         text-align: center;
         a {
           margin: 0 auto;
@@ -1446,7 +1458,11 @@ img {
     }
   }
   @media only screen and (max-width: 990px) {
-    padding-top: 80px;
+    .container {
+      .forklift {
+        display: none;
+      }
+    }
   }
 }
 /************* SERVICES PAGE ***************/
@@ -1458,6 +1474,9 @@ img {
     gap: 200px;
     .align-between {
       gap: 50px;
+      img {
+        border-radius: 10px;
+      }
       > div {
         width: 40%;
         > img {
@@ -1909,7 +1928,7 @@ img {
             input,
             select {
               font-size: 1.6rem;
-              height: 30px !important;
+              height: 40px !important;
               width: 100%;
             }
           }
@@ -1919,7 +1938,7 @@ img {
           .row3 {
             p {
               > input {
-                padding: 5px 30px !important;
+                padding: 5px 40px !important;
               }
             }
             a {
