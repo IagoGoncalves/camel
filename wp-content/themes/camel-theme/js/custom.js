@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
               slidesPerView: 1,
             },
           },
-        // autoplay: {
-        //     delay: 2500,
-        // },    
+        autoplay: {
+            delay: 2500,
+        },    
     });
     
     var locale = window.location.pathname;
